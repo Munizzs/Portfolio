@@ -1,13 +1,11 @@
 * {
-    margin: 0;
+    margin: 0;   
     padding: 0;
     box-sizing: border-box;
   }
 
 body{
     background-color: #06141B;
-    margin: 0;   
-    padding: 0;
     width: 100%;
     height: 100%;
     font-family: "Inter", sans-serif;
@@ -52,6 +50,7 @@ header{
 
 .container-inicio{
     /* border: 1px solid purple; */
+    margin: 0 70px;
     display: flex;
     gap: 50px;
     align-items: center;
@@ -61,7 +60,7 @@ header{
     border-radius: 50%;
     width: 400px;
     height: 400px;
-    margin: 60px 0 50px 150px;
+    margin: 60px 0 50px 100px;
 }
 
 .component_image img:hover{  
@@ -75,6 +74,10 @@ header{
     */
 }
 
+.component_right_home{
+    flex-direction: column;
+}
+
 .title{
     /* border: 1px solid purple; */
     width: 500px;
@@ -83,6 +86,7 @@ header{
     flex-direction: column;
     justify-content: center;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 
 .title p{
@@ -103,4 +107,35 @@ header{
     text-align: center; 
     color: #ebebeb;    
     line-height: 0.9;
+}
+
+.resume{
+    background-color: #7171713b;
+    text-align: center;
+    width: 110px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    gap: 5px;
+    padding: 8px 20px;
+    margin: 10px auto 0;
+}
+
+.resume:hover{
+    background-color: #ffffff48;
+}
+
+.resume img{
+    width: 20px;
+    height: 18px;
+}
+
+.resume a{
+    text-decoration: none;
+    font-size: 15px;      
+    color: #fff;
+    align-items: center;
 }
