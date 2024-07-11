@@ -51,33 +51,46 @@ header{
 /* container pagina inicio */
 
 .container-inicio{
+    /* border: 1px solid purple; */
     display: flex;
     gap: 50px;
     align-items: center;
 }
+
 .component_image img{   
-    /*border: 1px solid red;*/
-    width: 530px;
-    height: 460px;
-    margin: 40px 0 50px 80px;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    margin: 60px 0 50px 150px;
+}
+
+.component_image img:hover{  
+    border: 3px solid rgb(255, 255, 255);
+    transform: scale(0.9); 
+    /*
+    transform: translate(10px, -10px);
+    transform: skew(-5deg, -10deg);
+    transform: matrix(0,1,1,0,0,0);
+    transform: rotate(15deg);
+    */
 }
 
 .title{
-    /*border: 1px solid purple;*/
+    /* border: 1px solid purple; */
     width: 500px;
-    height: 200px;
+    height: 133px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-weight: bold;
-
 }
 
 .title p{
-    font-size: 40px;
+    font-size: 35px;
     text-align: left;  
     color: #717171;
     line-height: 1.2;
+    width: 140px;
 }
 
 .title p:hover{
@@ -85,7 +98,7 @@ header{
 }
 
 .title span{
-    font-size: 65px;
+    font-size: 55px;
     padding-left: 30px;
     text-align: center; 
     color: #ebebeb;    
