@@ -13,6 +13,7 @@ body{
     font-family: "Inter", sans-serif;
  
     /* Header - Nav */
+    
 }
 header{  
     height: 51px;  
@@ -21,7 +22,7 @@ header{
     box-sizing: border-box;
     /* border-bottom-left-radius: 20% ;
     border-bottom-right-radius: 20%; */
-    
+    /* border: 1px solid red; */
 }
 
 .nav-list{
