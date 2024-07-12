@@ -5,22 +5,25 @@
   }
 
 body{
-    background-color: #06141B;
     width: 100%;
     height: 100%;
     font-family: "Inter", sans-serif;
- 
-    /* Header - Nav */
-    
 }
+
+    /* Header */   
+
 header{  
+    position: fixed;
     height: 51px;  
     background-color: #0E0F11;
     width: 100%;
     box-sizing: border-box;
-    /* border-bottom-left-radius: 20% ;
-    border-bottom-right-radius: 20%; */
-    /* border: 1px solid red; */
+    z-index: 1000;
+    transition: 0.5s ease;
+}
+
+header.transparent {
+    background-color: rgba(14, 15, 17, 0.74);
 }
 
 .nav-list{
@@ -46,32 +49,37 @@ header{
     color: #fff;
 }
 
-/* container pagina inicio */
+main{
+    padding-top: 51px;
+    background-color: rgb(17, 51, 51);
+}
 
-.container-inicio{
-    /* border: 1px solid purple; */
-    margin: 0 70px;
+/* Page Home */
+
+#home{
+    background-color: #06141B;
+}
+
+.container-home{
+    /* border: 1px solid purple;  */
     display: flex;
     gap: 50px;
     align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 550px;
 }
 
-.component_image img{   
+.component_left_home img{   
     border-radius: 50%;
     width: 400px;
     height: 400px;
-    margin: 60px 0 50px 100px;
 }
 
-.component_image img:hover{  
-    border: 3px solid rgb(255, 255, 255);
-    transform: scale(0.9); 
-    /*
-    transform: translate(10px, -10px);
-    transform: skew(-5deg, -10deg);
-    transform: matrix(0,1,1,0,0,0);
-    transform: rotate(15deg);
-    */
+.component_left_home img:hover{  
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); 
+    transform: translateY(-10px); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .component_right_home{
@@ -109,8 +117,8 @@ header{
     line-height: 0.9;
 }
 
-.resume{
-    background-color: #7171713b;
+.resume {
+    background-color: #2014143f;
     text-align: center;
     width: 110px;
     height: 30px;
@@ -122,20 +130,99 @@ header{
     gap: 5px;
     padding: 8px 20px;
     margin: 10px auto 0;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.resume:hover{
-    background-color: #ffffff48;
+.resume:hover {
+    background-color: #292929c7;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); 
+    transform: translateY(-5px); 
 }
 
-.resume img{
+.resume img {
     width: 20px;
     height: 18px;
 }
 
-.resume a{
-    text-decoration: none;
+.resume span {
     font-size: 15px;      
-    color: #fff;
     align-items: center;
 }
+
+/* Page About Me */
+
+#about-me{
+    background: linear-gradient(#06141B,#0B2B3A);
+}
+
+.container_about-me{
+    /* border: 1px solid purple;  */
+    flex-direction: column;
+    width: auto;
+    height: 930px;
+    padding-top: 100px;
+}
+
+.title_about-me p{
+    font-size: 55px;
+    color: #ebebeb;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.container-boxes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.box {
+    background-color: #180d0d5b;
+    color: #dfdfdf;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 25px;
+    padding: 20px;
+    height: 200px;
+    width: 500px;
+    gap: 20px;
+}
+
+.box:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); 
+    transform: translateY(-10px); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+
+.box_organization {
+    grid-column: 1 / 2;
+}
+
+.box_education {
+    grid-column: 2 / 3;
+}
+
+.box_motivation {
+    grid-column: 1 / 4;
+    justify-self: center;
+}
+
+.box_experience {
+    grid-column: 1 / 2;
+}
+
+.box_developer {
+    grid-column: 2 / 3;
+}
+
