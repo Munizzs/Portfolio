@@ -47,6 +47,7 @@ header.transparent {
 
 .nav-list li a:hover {
     color: #fff;
+    box-shadow: 0 5px 80px rgba(233, 233, 233, 0.25); 
 }
 
 main{
@@ -225,4 +226,96 @@ main{
 .box_developer {
     grid-column: 2 / 3;
 }
+
+/* Page Skills */
+
+#skills{
+    background: linear-gradient(#0B2B3A,#164A63);
+}
+
+.container-skills{
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 600px;
+    padding-top: 100px;
+    align-items: center;
+    gap: 50px;
+}
+
+.title_skills{
+    font-size: 55px;
+    color: #ebebeb;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.iconsSkills {
+    background-color: #0e0f11bd;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 25px; 
+    row-gap: 30px;
+    width: 1100px;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 30px;
+    padding: 60px 20px;
+}
+
+.iconsSkills:hover {
+    background-color: #0e0f11cc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.589); 
+    transform: translateY(-15px); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.ic{
+    width: 50px; 
+    height: auto;
+}
+
+.ic:hover{
+    transform: translateY(-15px);  
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: #ffffff20;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.iconsSkills .iconOracle,
+.iconsSkills .iconVsCode,
+.iconsSkills .iconAws,
+.iconsSkills .iconSpring,
+.iconsSkills .iconGit {
+    grid-column: span 1;
+}
+
+.iconsSkills .iconOracle {
+    grid-column: 2 / 3;
+}
+
+.iconsSkills .iconVsCode {
+    grid-column: 3 / 4;
+}
+
+.iconsSkills .iconAws {
+    grid-column: 4 / 5;
+}
+
+.iconsSkills .iconSpring {
+    grid-column: 5 / 6;
+}
+
+.iconsSkills .iconGit {
+    grid-column: 6 / 7;
+}
+
+/* Page Projects */
+
 
