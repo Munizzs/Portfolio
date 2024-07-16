@@ -318,4 +318,200 @@ main{
 
 /* Page Projects */
 
+#project {
+    background: linear-gradient(#164A63, #397490);
+}
+
+.container-projects {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+    height: 800px;
+    padding-top: 100px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 50px;
+}
+
+.title_projects {
+    font-size: 55px;
+    color: #161616;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.boxes-projects {
+    background-color: #0e0f11bd;
+    width: 100%;
+    height: 500px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    justify-content: center; /* Centraliza os projetos horizontalmente */
+}
+
+.boxes-projects:hover {
+    background-color: #0e0f11cc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.589);
+    transform: translateY(-15px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-slide {
+    display: flex;
+    gap: 25px; /* Espaço entre os projetos */
+    transition: transform 0.3s ease;
+}
+
+.pr {
+    border: 1px solid rgba(201, 201, 201, 0.856);
+    background-color: #0e0f11c5;
+    width: 325px;
+    height: 450px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative; /* Para os botões de link */
+    overflow: hidden; /* Garante que o hover afete toda a área do projeto */
+}
+
+.pr img {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    padding-bottom: 10px;
+}
+
+.pr:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #0e0f11e5;
+}
+
+.pr:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: rgba(29, 29, 29, 0.658);
+    z-index: 1;
+    backdrop-filter: blur(5px); /* Adiciona desfoque */
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.project-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative; /* Para os botões de link */
+    z-index: 2; /* Garante que o conteúdo fique acima do overlay */
+}
+
+.txt_project-description {
+    color: #fff;
+    text-align: center;
+    font-size: 16px; 
+    font-weight: bold; 
+    margin-bottom: 10px;
+}
+
+.txt_project-tecnologias {
+    color: #fff;
+    text-align: center;
+    font-size: 14px; 
+    line-height: 1.5; 
+    margin-top: 0; 
+}
+
+.project-links {
+    display: none; 
+    gap: 10px; 
+    position: absolute;
+    top: -130px; /* Posiciona no topo */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3; /* Garante que os botões fiquem acima do overlay */
+}
+
+.btn-github, .btn-deploy {
+    background-color: #161616;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 4; /* Garante que os botões fiquem acima do overlay */
+}
+
+.btn-github:hover {
+    background-color: #444;
+}
+
+.btn-deploy:hover {
+    background-color: #444;
+}
+
+.pr:hover .project-links {
+    display: flex; /* Mostrar os botões ao passar o mouse */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(22, 22, 22, 0);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev img, .next img {
+    width: 20px;
+    height: 20px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(231, 231, 231, 0.185);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.589);
+    transform: translateY(-25px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boxes-projects::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(to left, rgb(17, 18, 19), rgba(14, 15, 17, 0));
+    z-index: 1;
+}
 
