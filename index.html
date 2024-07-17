@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muniz</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -23,7 +24,7 @@
 
         <div id="home" style="display: block;">
             <div class="container-home">
-                <div class="component_left_home">
+                <div class="component_left_home" data-aos="fade-left">
                     <img src="images/me2.png" alt="Foto no espelho de Matheus Muniz">
                 </div>
                 <div class="component_right_home">
@@ -36,7 +37,7 @@
                     </a>
                 </div>    
             </div>
-        </div>
+        </div>        
 
         <div id="about-me" style="display: block;">
             <div class="container_about-me">
@@ -101,55 +102,93 @@
                         <div class="pr projectOne">
                             <img src="images/DeBairro.png" alt="Projeto DeBairro">
                             <div class="project-content">
-                        <p class="txt_project-description">Aplicativo para Pequenos Comércios</p>
-                        <p class="txt_project-tecnologias">Um aplicativo para gerenciar comércios de bairro, com funcionalidades para adicionar produtos, controlar entradas e saídas, cadastrar clientes e gerenciar finanças.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/Munizzs/DeBairro_TCC" target="_blank" class="btn-github">GitHub</a>                            
+                                <p class="txt_project-description">
+                                    Aplicativo para Pequenos Comércios
+                                </p>
+                                <p class="txt_project-tecnologias">
+                                    Um aplicativo para gerenciar comércios de bairro, com funcionalidades para adicionar produtos, controlar entradas e saídas, cadastrar clientes e gerenciar finanças.
+                                </p>
+                                <div class="project-links">
+                                    <a href="https://github.com/Munizzs/DeBairro_TCC" target="_blank" class="btn-github">GitHub</a>                            
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pr projectTwo">
+                            <img src="images/Links.png" alt="Projeto Links">
+                            <div class="project-content">
+                                <p class="txt_project-description">Site Interativo e Responsivo de links</p>
+                                <p class="txt_project-tecnologias">Um site que apresenta meus links sociais, com opções de modo claro e escuro.</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/Munizzs/ProjetoLinks" target="_blank" class="btn-github">GitHub</a>
+                                    <a href="https://munizzs.github.io/ProjetoLinks/" target="_blank" class="btn-deploy">Deploy</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pr projectThree">
+                            <img src="images/DeBairro2.png" alt="Projeto DeBairro">
+                            <div class="project-content">
+                                <p class="txt_project-description">Descrição do Projeto Três</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/usuario/repo" target="_blank" class="btn-github">GitHub</a>
+                                    <a href="https://deploy-url.com" target="_blank" class="btn-deploy">Deploy</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="pr projectTwo">
-                    <img src="images/Links.png" alt="Projeto Links">
-                    <div class="project-content">
-                        <p class="txt_project-description">Site Interativo e Responsivo de links</p>
-                        <p class="txt_project-tecnologias">Um site que apresenta meus links sociais, com opções de modo claro e escuro.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Munizzs/ProjetoLinks" target="_blank" class="btn-github">GitHub</a>
-                            <a href="https://munizzs.github.io/ProjetoLinks/" target="_blank" class="btn-deploy">Deploy</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="pr projectThree">
-                    <img src="images/DeBairro2.png" alt="Projeto DeBairro">
-                    <div class="project-content">
-                        <p class="txt_project-description">Descrição do Projeto Três</p>
-                        <div class="project-links">
-                            <a href="https://github.com/usuario/repo" target="_blank" class="btn-github">GitHub</a>
-                            <a href="https://deploy-url.com" target="_blank" class="btn-deploy">Deploy</a>
-                        </div>
-                    </div>
+                    <button class="prev"><img src="images/setaEsquerda.png" alt="Anterior"></button>
+                    <button class="next"><img src="images/setaDireita.png" alt="Próximo"></button>
                 </div>
             </div>
-            <button class="prev"><img src="images/setaEsquerda.png" alt="Anterior"></button>
-            <button class="next"><img src="images/setaDireita.png" alt="Próximo"></button>
         </div>
-    </div>
-</div>
         
         
 
         <div id="contact" style="display: block;">
-            <!-- <a href="https://www.linkedin.com/in/matheus-munizz/" target="_blank">
-                <ion-icon name="logo-java"></ion-icon>
-            </a> -->
+            <div class="container-contact">
+                <div class="title_contact">
+                    <p>Contato</p>
+                </div>
+                <div class="box_Contact">
+                    <div class="contact-box">
+                        <div class="box_email">
+                            <p class="txt_contact">Fale comigo</p>
+                            <form id="emailForm">
+                                <div class="input_wrapper">
+                                    <input class="input_contact" type="email" id="email" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="input_wrapper">
+                                    <input class="input_contact" type="text" id="name" name="name" placeholder="Nome" required>
+                                </div>
+                                <p class="txt_contact">Mensagem</p>
+                                <div class="input_wrapper">
+                                    <textarea class="input_txt" id="message" name="message" placeholder="Olá, me chamo Matheus..." required></textarea>
+                                </div>
+                                <button type="button" class="send" onclick="sendEmail()">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="contact-box">
+                        <div class="box_buttons">
+                            <a href="https://www.linkedin.com/in/matheus-munizz/" class="icon-linkedin"><ion-icon name="logo-linkedin"></ion-icon></a>
+                            <a href="https://github.com/Munizzs" class="icon-github"><ion-icon name="logo-github"></ion-icon></a>
+                            <a href="https://www.instagram.com/munizzs/" class="icon-instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a href="mailto:matheusmuniz082003@gmail.com" class="icon-email"><ion-icon name="mail"></ion-icon></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
+             
     </main>
 
     <footer>
-        
+        <div class="footer-container">
+            <div class="footer-section">
+                <p>Feito por Muniz</p>
+            </div>
+        </div>
     </footer>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -158,6 +197,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

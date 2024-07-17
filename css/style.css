@@ -351,7 +351,7 @@ main{
     align-items: center;
     position: relative;
     overflow: hidden;
-    justify-content: center; /* Centraliza os projetos horizontalmente */
+    justify-content: center;
 }
 
 .boxes-projects:hover {
@@ -363,7 +363,7 @@ main{
 
 .project-slide {
     display: flex;
-    gap: 25px; /* Espaço entre os projetos */
+    gap: 25px; 
     transition: transform 0.3s ease;
 }
 
@@ -379,7 +379,7 @@ main{
     gap: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    position: relative; /* Para os botões de link */
+    position: relative;
     overflow: hidden; /* Garante que o hover afete toda a área do projeto */
 }
 
@@ -417,8 +417,8 @@ main{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    position: relative; /* Para os botões de link */
-    z-index: 2; /* Garante que o conteúdo fique acima do overlay */
+    position: relative; 
+    z-index: 2; 
 }
 
 .txt_project-description {
@@ -515,3 +515,189 @@ main{
     z-index: 1;
 }
 
+/* Page Contact */
+
+#contact {
+    background: linear-gradient(#397490, #71ABC7);
+}
+
+.container-contact {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 50px;
+}
+
+.title_contact {
+    font-size: 55px;
+    color: #161616;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.box_Contact {
+    background-color: #0e0f11bd;
+    width: 100%;
+    height: 500px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box_Contact:hover {
+    background-color: #0e0f11cc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.589);
+    transform: translateY(-15px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-box {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.box_email {
+    display: flex;
+    width: 60%;
+    height: 400px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.txt_contact {
+    color: #fff;
+    font-size: 13px;
+}
+
+.input_contact, .input_txt {
+    background-color: #5B5B5B;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    color: #ffffff;
+    width: 100%;
+    padding: 10px; 
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden; 
+    text-align: center;
+}
+
+.input_contact {
+    height: 50px; 
+}
+
+.input_txt {
+    height: 150px; 
+    overflow: auto; 
+}
+
+.input_contact:hover, .input_txt:hover {
+    background-color: #0e0f11cc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.589); 
+    transform: translateY(-8px); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+input::placeholder, .input_txt::placeholder {
+    color: #ffffffb0;
+    position: absolute;
+    top: 10px; 
+    left: 10px; 
+    pointer-events: none;
+}
+
+.send {
+    background-color: #5B5B5B;
+    width: 30%;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    color: #fff;
+    align-self: center;
+}
+
+.send:hover {
+    background-color: #8d8d8dcc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.589); 
+    transform: translateY(-4px); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input_wrapper{
+    padding-bottom: 12px;
+}
+
+.box_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; 
+}
+
+.box_buttons a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 30px; 
+    color: #fff; 
+}
+
+.box_buttons a ion-icon {
+    color: #fff;
+}
+
+.icon-linkedin:hover:after {
+    content: "LinkedIn";
+    background: linear-gradient(#1d20c4c0,#3536798e);
+    border-radius: 5px;
+}
+
+.icon-github:hover:after {
+    content: "GitHub";
+    background: linear-gradient(#cfcfcf83,#92929296);
+    border-radius: 5px;
+}
+
+.icon-instagram:hover:after {
+    content: "Instagram";
+    background: linear-gradient(#5e00acd2, #ff1aa7d0, #ff0e0ecb, #ffd30cd7);
+    border-radius: 5px;
+}
+
+.icon-email:hover:after {
+    content: "Email";
+    background: linear-gradient(#ff0e0ecb,#c74949c5);
+    border-radius: 5px;
+}
+
+/* Estilos para o rodapé */
+
+footer {
+    background-color: #161616;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
