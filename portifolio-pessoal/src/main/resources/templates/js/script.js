@@ -46,3 +46,30 @@ updateButtons();
 window.addEventListener('resize', () => {
     updateCarousel();
 });
+
+// Inicializa o AOS
+AOS.init({
+    duration: 1000, // Duração da animação em milissegundos
+    easing: 'ease-in-out', // Tipo de easing
+});
+
+function sendEmail() {
+    const email = document.getElementById('email').value;
+    const name = document.getElementById('name').value;
+    const message = document.getElementById('message').value;
+
+    fetch('/send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, name, message })
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert('Email enviado com sucesso!');
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+    });
+}
