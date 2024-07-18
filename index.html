@@ -4,13 +4,200 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muniz</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
-    <header>
-        
+
+    <header id="header">
+        <ul class="nav-list">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about-me">Sobre Mim</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#project">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
     </header>
-    
+
+    <main>
+
+        <div id="home" style="display: block;">
+            <div class="container-home">
+                <div class="component_left_home" data-aos="fade-left">
+                    <img src="images/me2.png" alt="Foto no espelho de Matheus Muniz">
+                </div>
+                <div class="component_right_home">
+                    <div class="title">
+                        <p>Eu sou</p><span>Desenvolvedor Fullstack</span>
+                    </div>
+                    <a href="docs/Muniz.pdf" download="Resume_Muniz.pdf" class="resume">
+                        <img src="images/icondownload.png" alt="Icone de baixar">
+                        <span>Currículo</span>
+                    </a>
+                </div>    
+            </div>
+        </div>        
+
+        <div id="about-me" style="display: block;">
+            <div class="container_about-me">
+                <div class="title_about-me">
+                    <p>Sobre Mim</p>
+                </div>
+                <div class="container-boxes">
+                    <div class="box box_organization">
+                        <h3>Organização e Eficiência</h3>
+                        <p>Gosto de me manter organizado nas minhas rotinas diárias, utilizando ferramentas como Excel, Trello, entre outras. Reconheço que a organização é uma prática que pode aprimorar e simplificar meu dia a dia, contribuindo para a eficiência e produtividade.</p>                  
+                    </div>
+                    <div class="box box_education">
+                        <h3>Educação e Estudo Contínuo</h3>
+                        <p>Gosto de estudar e atualmente estou cursando Análise e Desenvolvimento de Sistemas na faculdade. Concluí um curso técnico na mesma área e dedico parte do meu tempo a estudos autônomos, com temas como inglês, Excel, desenvolvimento pessoal e programação. Acredito que o estudo contínuo é essencial para o crescimento profissional e pessoal.</p>
+                    </div>
+                    <div class="box box_motivation">
+                        <h3>O que me motiva</h3>
+                        <p> A minha motivação atual está em adquirir novos conhecimentos e aplicá-los para superar e encarar com confiança os desafios diários. Acredito que a busca contínua por aprendizado e aperfeiçoamento é fundamental para o desenvolvimento pessoal e profissional.</p>
+                    </div>
+                    <div class="box box_experience">
+                        <h3>Experiência Corporativa</h3>
+                        <p>Embora ainda não tenha experiência no mundo corporativo como programador, trabalhei como aprendiz administrativo na empresa Vida Care - Medicina do Trabalho. Durante esse período, desenvolvi habilidades interpessoais (Soft Skills) e habilidades técnicas (Hard Skills), o que me permitiu compreender mais profundamente o funcionamento do ambiente corporativo e me preparar para futuros desafios como programador.</p>
+                    </div>
+                    <div class="box box_developer">
+                        <h3>Desenvolvedor FullStack</h3>
+                        <p>Como desenvolvedor FullStack no início da carreira, estou em constante busca pelo aprimoramento e desenvolvimento profissional. Dedico-me a treinar minha lógica de programação, explorando novos conceitos e técnicas, e aprofundando meu domínio nas linguagens de programação por meio de cursos, workshops e projetos práticos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="skills">
+            <div class="container-skills">
+                <div class="title_skills">
+                    <p>Habilidades</p>
+                </div>
+                <div class="iconsSkills">
+                    <img class="ic iconJava" src="images/java.png" alt="Icone Java" data-title="Java">
+                    <img class="ic iconCSharp" src="images/csharp.png" alt="Icone C Sharp" data-title="C#">
+                    <img class="ic iconPython" src="images/python.png" alt="Icone Python" data-title="Python">
+                    <img class="ic iconJavaScript" src="images/javascript.png" alt="Icone Javascript" data-title="JavaScript">
+                    <img class="ic iconHtml" src="images/html.png" alt="Icone Html" data-title="HTML">
+                    <img class="ic iconCss" src="images/css.png" alt="Icone Css" data-title="CSS">
+                    <img class="ic iconSql" src="images/sql.png" alt="Icone Sql" data-title="SQL">
+                    <img class="ic iconOracle" src="images/oracle.png" alt="Icone Oracle" data-title="Oracle">
+                    <img class="ic iconVsCode" src="images/vs.png" alt="Icone VsCode" data-title="VS Code">
+                    <img class="ic iconAws" src="images/aws.png" alt="Icone Aws" data-title="AWS">
+                    <img class="ic iconSpring" src="images/spring.png" alt="Icone Spring" data-title="Spring">
+                    <img class="ic iconGit" src="images/git.png" alt="Icone Git" data-title="Git">
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="project">
+            <div class="container-projects">
+                <div class="title_projects">
+                    <p>Projetos</p>
+                </div>
+                <div class="boxes-projects">
+                    <div class="project-slide">
+                        <div class="pr projectOne">
+                            <img src="images/DeBairro.png" alt="Projeto DeBairro">
+                            <div class="project-content">
+                                <p class="txt_project-description">
+                                    Aplicativo para Pequenos Comércios
+                                </p>
+                                <p class="txt_project-tecnologias">
+                                    Um aplicativo para gerenciar comércios de bairro, com funcionalidades para adicionar produtos, controlar entradas e saídas, cadastrar clientes e gerenciar finanças.
+                                </p>
+                                <div class="project-links">
+                                    <a href="https://github.com/Munizzs/DeBairro_TCC" target="_blank" class="btn-github">GitHub</a>                            
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pr projectTwo">
+                            <img src="images/Links.png" alt="Projeto Links">
+                            <div class="project-content">
+                                <p class="txt_project-description">Site Interativo e Responsivo de links</p>
+                                <p class="txt_project-tecnologias">Um site que apresenta meus links sociais, com opções de modo claro e escuro.</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/Munizzs/ProjetoLinks" target="_blank" class="btn-github">GitHub</a>
+                                    <a href="https://munizzs.github.io/ProjetoLinks/" target="_blank" class="btn-deploy">Deploy</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pr projectThree">
+                            <img src="images/DeBairro2.png" alt="Projeto DeBairro">
+                            <div class="project-content">
+                                <p class="txt_project-description">Descrição do Projeto Três</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/usuario/repo" target="_blank" class="btn-github">GitHub</a>
+                                    <a href="https://deploy-url.com" target="_blank" class="btn-deploy">Deploy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="prev"><img src="images/setaEsquerda.png" alt="Anterior"></button>
+                    <button class="next"><img src="images/setaDireita.png" alt="Próximo"></button>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <div id="contact" style="display: block;">
+            <div class="container-contact">
+                <div class="title_contact">
+                    <p>Contato</p>
+                </div>
+                <div class="box_Contact">
+                    <div class="contact-box">
+                        <div class="box_email">
+                            <p class="txt_contact">Fale comigo</p>
+                            <form id="emailForm">
+                                <div class="input_wrapper">
+                                    <input class="input_contact" type="email" id="email" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="input_wrapper">
+                                    <input class="input_contact" type="text" id="name" name="name" placeholder="Nome" required>
+                                </div>
+                                <p class="txt_contact">Mensagem</p>
+                                <div class="input_wrapper">
+                                    <textarea class="input_txt" id="message" name="message" placeholder="Olá, me chamo Matheus..." required></textarea>
+                                </div>
+                                <button type="button" class="send" onclick="sendEmail()">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="contact-box">
+                        <div class="box_buttons">
+                            <a href="https://www.linkedin.com/in/matheus-munizz/" class="icon-linkedin"><ion-icon name="logo-linkedin"></ion-icon></a>
+                            <a href="https://github.com/Munizzs" class="icon-github"><ion-icon name="logo-github"></ion-icon></a>
+                            <a href="https://www.instagram.com/munizzs/" class="icon-instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a href="mailto:matheusmuniz082003@gmail.com" class="icon-email"><ion-icon name="mail"></ion-icon></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+             
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <p>Feito por Muniz</p>
+            </div>
+        </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
