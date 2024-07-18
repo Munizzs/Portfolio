@@ -32,7 +32,7 @@ nextBtn.addEventListener('click', () => {
 });
 
 prevBtn.addEventListener('click', () => {
-    if (index > 0) { // Começar do início
+    if (index > 0) { 
         index--;
         updateCarousel();
         updateButtons();
@@ -67,7 +67,8 @@ function sendEmail() {
     })
     .then(response => response.text())
     .then(data => {
-        alert('Email enviado com sucesso!');
+        // alert('Email enviado com sucesso!');
+        alert('Não esta funcionando no momento');
     })
     .catch(error => {
         console.error('Erro:', error);
