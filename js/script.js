@@ -14,17 +14,17 @@ const boxesProjects = document.querySelector('.project-slide');
 let index = 0;
 
 function updateCarousel() {
-    const offset = -index * (325 + 20); // Largura dos itens + o espaço entre eles
+    const offset = -index * (325 + 25); // Largura dos itens + o espaço entre eles
     boxesProjects.style.transform = `translateX(${offset}px)`;
 }
 
 function updateButtons() {
     prevBtn.disabled = index === 0;
-    nextBtn.disabled = index >= 2; // 2 porque você tem 3 itens e só pode avançar 2 vezes
+    nextBtn.disabled = index >= 3; 
 }
 
 nextBtn.addEventListener('click', () => {
-    if (index < 2) { // Pode avançar 2 vezes
+    if (index < 4) { // Pode avançar 
         index++;
         updateCarousel();
         updateButtons();
